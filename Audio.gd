@@ -3,6 +3,7 @@ extends AudioStreamPlayer2D
 var beat = 0
 var beatOdd = 0
 var bpm = 143
+var measure = 0
 
 
 var vol = 0
@@ -20,20 +21,29 @@ func _physics_process(delta):
 	$"Rotating Lights"
 	if beat > 1:
 		beat = 0
-		print("BEAT")
 		$"Rotating Lights".play("default")
 		$Glow.play("default")
-
+		measure += 1
 		beatOdd += 1
-		if beatOdd == 2:
-			$Bars2.play("default")
-			$Camera2D.position.x = 920
-			$Camera2D.rotation_degrees = 5
-			beatOdd = 0
-		elif beatOdd == 1:
-			$Bars.play("default")
-			$Camera2D.position.x = 1000
-			$Camera2D.rotation_degrees = -5
+	print(str(vol))
+
+
+	if beatOdd == 2:
+		$Bars2.play("default")
+		$Camera2D.position.x = 920
+		$Camera2D.rotation_degrees = 5
+		$Camera2D.position.y = 480
+		$OuterGlow.play("default")
+
+		beatOdd = 0
+	elif beatOdd == 1:
+		$Bars.play("default")
+		$Camera2D.position.x = 1000
+		$Camera2D.rotation_degrees = -5
+
+	if measure == 3:
+		measure = 0
+		$Camera2D.position.y = 600
 		
 
 	$Visualizer3.value = vol

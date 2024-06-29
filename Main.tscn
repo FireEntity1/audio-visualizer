@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dwlw6kk4nm8sa"]
+[gd_scene load_steps=69 format=3 uid="uid://dwlw6kk4nm8sa"]
 
 [ext_resource type="Shader" path="res://Background.gdshader" id="1_5jdyw"]
 [ext_resource type="AudioStream" uid="uid://burfd5kxo6f44" path="res://Song.mp3" id="1_aetvp"]
@@ -6,9 +6,11 @@
 [ext_resource type="Script" path="res://Audio.gd" id="2_o6fqn"]
 [ext_resource type="Texture2D" uid="uid://dfv40w2cyn4k6" path="res://Visualizer1.png" id="2_ojbix"]
 [ext_resource type="Texture2D" uid="uid://dd38at3s1yi1l" path="res://BGRepeat.png" id="2_wa0pd"]
+[ext_resource type="Texture2D" uid="uid://dblf5yqx11liw" path="res://Parallax.png" id="4_embc2"]
 [ext_resource type="Texture2D" uid="uid://b6ne32v61fqly" path="res://Visualizer5.png" id="4_veq3a"]
 [ext_resource type="Texture2D" uid="uid://c484vif7jbkec" path="res://Visualizer3.png" id="5_u53ek"]
 [ext_resource type="Texture2D" uid="uid://b8bqhf41em4yd" path="res://visualizer4.png" id="6_nl0xp"]
+[ext_resource type="Texture2D" uid="uid://cc0my3kt5rmrg" path="res://Visualizer6.png" id="11_box5e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nokdb"]
 shader = ExtResource("1_5jdyw")
@@ -18,6 +20,15 @@ shader_parameter/repeat_x = 10.0
 shader_parameter/repeat_y = 10.0
 shader_parameter/row_offset = 1.0
 shader_parameter/texture_to_scroll = ExtResource("2_wa0pd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gkahs"]
+shader = ExtResource("1_5jdyw")
+shader_parameter/scroll_speed = 1.159
+shader_parameter/angle_degrees = 90.0
+shader_parameter/repeat_x = 12.0
+shader_parameter/repeat_y = 12.0
+shader_parameter/row_offset = 0.52
+shader_parameter/texture_to_scroll = ExtResource("4_embc2")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uexfn"]
 atlas = ExtResource("4_veq3a")
@@ -344,13 +355,83 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_x76my"]
+atlas = ExtResource("11_box5e")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ifwm"]
+atlas = ExtResource("11_box5e")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orixh"]
+atlas = ExtResource("11_box5e")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkac5"]
+atlas = ExtResource("11_box5e")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fljdx"]
+atlas = ExtResource("11_box5e")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnhsq"]
+atlas = ExtResource("11_box5e")
+region = Rect2(384, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73176"]
+atlas = ExtResource("11_box5e")
+region = Rect2(448, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8nxl"]
+atlas = ExtResource("11_box5e")
+region = Rect2(512, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pp3ho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x76my")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ifwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orixh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkac5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fljdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnhsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73176")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8nxl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 40.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="BG" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_nokdb")
 position = Vector2(928, 518)
-scale = Vector2(21.5544, 22.6788)
+scale = Vector2(24.8888, 26.1871)
 texture = ExtResource("2_axcx5")
+
+[node name="BG 2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_gkahs")
+position = Vector2(923, 515)
+scale = Vector2(94.8975, 87.8547)
+texture = ExtResource("4_embc2")
 
 [node name="Music Player" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_aetvp")
@@ -365,16 +446,18 @@ sprite_frames = SubResource("SpriteFrames_7ycll")
 frame = 18
 frame_progress = 1.0
 
-[node name="Bars" type="AnimatedSprite2D" parent="Music Player"]
-modulate = Color(1, 1, 1, 0.380392)
-position = Vector2(967.5, 540)
-scale = Vector2(31.1406, 37.4229)
+[node name="Bars2" type="AnimatedSprite2D" parent="Music Player"]
+modulate = Color(1, 1, 1, 0.521569)
+position = Vector2(966.1, 540)
+rotation = -1.5708
+scale = Vector2(22.1625, 79.1648)
 sprite_frames = SubResource("SpriteFrames_063oh")
 
-[node name="Bars2" type="AnimatedSprite2D" parent="Music Player"]
-modulate = Color(1, 1, 1, 0.380392)
-position = Vector2(966.1, 540)
-scale = Vector2(-31.4345, -37.423)
+[node name="Bars" type="AnimatedSprite2D" parent="Music Player"]
+modulate = Color(1, 1, 1, 0.521569)
+position = Vector2(967.5, 540)
+rotation = 1.5708
+scale = Vector2(27.2297, 84.5489)
 sprite_frames = SubResource("SpriteFrames_063oh")
 
 [node name="Visualizer3" type="TextureProgressBar" parent="Music Player"]
@@ -384,7 +467,7 @@ offset_right = 1699.0
 offset_bottom = 138.0
 scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
-max_value = -10.0
+max_value = -15.0
 step = 0.1
 value = -15.0
 fill_mode = 3
@@ -397,7 +480,7 @@ offset_right = 42.0
 offset_bottom = 126.0
 scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
-max_value = -10.0
+max_value = -15.0
 step = 0.1
 value = -15.0
 fill_mode = 3
@@ -415,5 +498,12 @@ frame_progress = 1.0
 [node name="Camera2D" type="Camera2D" parent="Music Player"]
 position = Vector2(960, 540)
 ignore_rotation = false
+zoom = Vector2(0.75, 0.75)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="OuterGlow" type="AnimatedSprite2D" parent="Music Player"]
+modulate = Color(1, 1, 1, 0.419608)
+position = Vector2(955, 618.93)
+scale = Vector2(45.9375, 62.3794)
+sprite_frames = SubResource("SpriteFrames_pp3ho")
