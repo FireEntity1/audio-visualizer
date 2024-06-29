@@ -1,29 +1,35 @@
 extends AudioStreamPlayer2D
 
 var beat = 0
+var beatOdd = 0
+var bpm = 143
 
 var vol = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var path = OS.get_executable_path().get_base_dir() + "/song.ogg"
+	$CustomPlayer.stream = AudioStreamOggVorbis.load_from_file(path)
+	$CustomPlayer.play()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	vol = AudioServer.get_bus_peak_volume_right_db(0,0)
-	beat += 0.03972166667
+	beat += float(bpm)/60/60
+	$"Rotating Lights"
 	if beat > 1:
 		beat = 0
 		print("BEAT")
-		$Visualizer2.play("default")
-	
-	$Visualizer3.value = vol+1
-	$Visualizer4.value = vol+2
-	$Visualizer5.value = vol+3
-	$Visualizer6.value = vol+4
-	$Visualizer7.value = vol+4
-	$Visualizer8.value = vol+3
-	$Visualizer9.value = vol+2
-	$Visualizer10.value = vol+1
+		$"Rotating Lights".play("default")
+
+		beatOdd += 1
+		if beatOdd == 2:
+			$Bars2.play("default")
+			beatOdd = 0
+		elif beatOdd == 1:
+			$Bars.play("default")
+		
+	$Visualizer3.value = vol
+	$Visualizer10.value = vol
 	
