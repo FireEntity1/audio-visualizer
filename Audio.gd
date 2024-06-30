@@ -32,7 +32,6 @@ func _physics_process(delta):
 
 
 		if beatOdd == 2:
-			$Bars2.play("default")
 			$Camera2D.position.x = 920
 			$Camera2D.rotation_degrees = 5
 			$Camera2D.position.y = 480
@@ -40,7 +39,6 @@ func _physics_process(delta):
 
 			beatOdd = 0
 		elif beatOdd == 1:
-			$Bars.play("default")
 			$Camera2D.position.x = 1000
 			$Camera2D.rotation_degrees = -5
 
@@ -54,13 +52,20 @@ func _physics_process(delta):
 		$Visualizer10.value = vol
 		$Visualizer5.value = vol
 		$Visualizer12.value = vol
+		$Visualizer16.value = vol
+		$Visualizer13.value = vol
+		$Visualizer14.value = vol
+		$Visualizer15.value = vol
+		$Visualizer18.value = vol
+		$Visualizer17.value = vol
+		
+		
 
 func _on_button_button_up():
 	$TextEdit.queue_free()
 	$Button.queue_free()
 	isRunning = true
 	var path = OS.get_executable_path().get_base_dir() + "/song.ogg"
-	self.play()
 	$Coverup.queue_free()
 	$CustomPlayer.stream = AudioStreamOggVorbis.load_from_file(path)
 	$CustomPlayer.play()

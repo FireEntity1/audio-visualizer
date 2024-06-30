@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://dwlw6kk4nm8sa"]
+[gd_scene load_steps=53 format=3 uid="uid://dwlw6kk4nm8sa"]
 
 [ext_resource type="Shader" path="res://Background.gdshader" id="1_5jdyw"]
 [ext_resource type="AudioStream" uid="uid://burfd5kxo6f44" path="res://Song.mp3" id="1_aetvp"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dd38at3s1yi1l" path="res://Sprites/BGRepeat.png" id="2_wa0pd"]
 [ext_resource type="Texture2D" uid="uid://dblf5yqx11liw" path="res://Sprites/Parallax.png" id="4_embc2"]
 [ext_resource type="Texture2D" uid="uid://b6ne32v61fqly" path="res://Sprites/Visualizer5.png" id="4_veq3a"]
-[ext_resource type="Texture2D" uid="uid://c484vif7jbkec" path="res://Sprites/Visualizer3.png" id="5_u53ek"]
 [ext_resource type="Texture2D" uid="uid://b8bqhf41em4yd" path="res://Sprites/visualizer4.png" id="6_nl0xp"]
 [ext_resource type="Texture2D" uid="uid://cc0my3kt5rmrg" path="res://Sprites/Visualizer6.png" id="11_box5e"]
 [ext_resource type="FontFile" uid="uid://bemm35ki07kj4" path="res://Silkscreen-Regular.ttf" id="12_dfnq2"]
@@ -176,154 +175,6 @@ animations = [{
 "speed": 60.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i5yua"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(0, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xyd63"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(64, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eqqli"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(128, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4y315"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(192, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yp131"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(256, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bm5nm"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(320, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yoa3c"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(384, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_chtps"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(448, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vpusr"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(512, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ty4ys"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(576, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hly7c"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(640, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0kvor"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(704, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l0v82"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(768, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jvn6w"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(832, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i44ij"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(896, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xbw4c"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(960, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h7u5d"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(1024, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hv337"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(1088, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0vla5"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(1152, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7wtrk"]
-atlas = ExtResource("5_u53ek")
-region = Rect2(1216, 0, 64, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_063oh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i5yua")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xyd63")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eqqli")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4y315")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yp131")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bm5nm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yoa3c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_chtps")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vpusr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ty4ys")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hly7c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0kvor")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l0v82")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jvn6w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i44ij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xbw4c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h7u5d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hv337")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0vla5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7wtrk")
-}],
-"loop": false,
-"name": &"default",
-"speed": 40.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_eq6ig"]
 atlas = ExtResource("6_nl0xp")
 region = Rect2(0, 0, 32, 16)
@@ -453,95 +304,159 @@ sprite_frames = SubResource("SpriteFrames_7ycll")
 frame = 18
 frame_progress = 1.0
 
-[node name="Bars2" type="AnimatedSprite2D" parent="Music Player"]
-modulate = Color(1, 1, 1, 0.521569)
-position = Vector2(966.1, 540)
-rotation = -1.5708
-scale = Vector2(22.1625, 79.1648)
-sprite_frames = SubResource("SpriteFrames_063oh")
-
-[node name="Bars" type="AnimatedSprite2D" parent="Music Player"]
-modulate = Color(1, 1, 1, 0.521569)
-position = Vector2(967.5, 540)
-rotation = 1.5708
-scale = Vector2(27.2297, 84.5489)
-sprite_frames = SubResource("SpriteFrames_063oh")
-
 [node name="Visualizer3" type="TextureProgressBar" parent="Music Player"]
-offset_left = 1659.0
-offset_top = 10.0
-offset_right = 1699.0
-offset_bottom = 138.0
+offset_left = 1572.0
+offset_top = 321.0
+offset_right = 1612.0
+offset_bottom = 449.0
 scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
 max_value = -15.0
 step = 0.1
-value = -25.0
+value = -15.0
 fill_mode = 3
 texture_progress = ExtResource("2_ojbix")
 
 [node name="Visualizer4" type="TextureProgressBar" parent="Music Player"]
-offset_left = 1990.0
-offset_top = 267.0
-offset_right = 2030.0
-offset_bottom = 395.0
+offset_left = 1836.0
+offset_top = 318.0
+offset_right = 1876.0
+offset_bottom = 446.0
 scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
 max_value = -15.0
 step = 0.1
-value = -25.0
+value = -15.0
 fill_mode = 3
 texture_progress = ExtResource("2_ojbix")
 
 [node name="Visualizer5" type="TextureProgressBar" parent="Music Player"]
-offset_left = 1210.0
-offset_top = 687.0
-offset_right = 1250.0
-offset_bottom = 815.0
+offset_left = 1313.0
+offset_top = 749.0
+offset_right = 1353.0
+offset_bottom = 877.0
 scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
 max_value = -15.0
 step = 0.1
-value = -25.0
+value = -15.0
 fill_mode = 3
 texture_progress = ExtResource("2_ojbix")
 
 [node name="Visualizer10" type="TextureProgressBar" parent="Music Player"]
-offset_left = 1.99999
-offset_top = -2.0
-offset_right = 42.0
-offset_bottom = 126.0
+offset_left = 35.0
+offset_top = 322.0
+offset_right = 75.0
+offset_bottom = 450.0
 scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
 max_value = -15.0
 step = 0.1
-value = -25.0
+value = -15.0
 fill_mode = 3
 texture_progress = ExtResource("2_ojbix")
 
 [node name="Visualizer11" type="TextureProgressBar" parent="Music Player"]
-offset_left = -312.0
-offset_top = 247.0
-offset_right = -272.0
-offset_bottom = 375.0
+offset_left = -219.0
+offset_top = 313.0
+offset_right = -179.0
+offset_bottom = 441.0
 scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
 max_value = -15.0
 step = 0.1
-value = -25.0
+value = -15.0
 fill_mode = 3
 texture_progress = ExtResource("2_ojbix")
 
 [node name="Visualizer12" type="TextureProgressBar" parent="Music Player"]
-offset_left = 328.0
-offset_top = 679.0
-offset_right = 368.0
-offset_bottom = 807.0
+offset_left = 286.0
+offset_top = 733.0
+offset_right = 326.0
+offset_bottom = 861.0
 scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
 max_value = -15.0
 step = 0.1
-value = -25.0
+value = -15.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer17" type="TextureProgressBar" parent="Music Player"]
+offset_left = 542.0
+offset_top = 793.0
+offset_right = 582.0
+offset_bottom = 921.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -15.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer18" type="TextureProgressBar" parent="Music Player"]
+offset_left = 1059.0
+offset_top = 786.0
+offset_right = 1099.0
+offset_bottom = 914.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -15.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer13" type="TextureProgressBar" parent="Music Player"]
+offset_left = -459.0
+offset_top = 318.0
+offset_right = -419.0
+offset_bottom = 446.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -15.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer14" type="TextureProgressBar" parent="Music Player"]
+offset_left = -713.0
+offset_top = 309.0
+offset_right = -673.0
+offset_bottom = 437.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -15.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer15" type="TextureProgressBar" parent="Music Player"]
+offset_left = 2345.0
+offset_top = 326.0
+offset_right = 2385.0
+offset_bottom = 454.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -15.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer16" type="TextureProgressBar" parent="Music Player"]
+offset_left = 2091.0
+offset_top = 317.0
+offset_right = 2131.0
+offset_bottom = 445.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -15.0
 fill_mode = 3
 texture_progress = ExtResource("2_ojbix")
 
