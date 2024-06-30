@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://bj4yxqprf8y27"]
+
+[ext_resource type="Shader" path="res://Background.gdshader" id="1_vbwpy"]
+[ext_resource type="Texture2D" uid="uid://dd38at3s1yi1l" path="res://Sprites/BGRepeat.png" id="2_pkh3t"]
+[ext_resource type="Texture2D" uid="uid://bqmcg6bdp7pfs" path="res://Sprites/bg.png" id="3_2flcl"]
+[ext_resource type="FontFile" uid="uid://bemm35ki07kj4" path="res://Silkscreen-Regular.ttf" id="4_1kn7k"]
+[ext_resource type="Texture2D" uid="uid://bq3boskt27brt" path="res://Sprites/button1.png" id="5_n3tri"]
+[ext_resource type="Texture2D" uid="uid://b0phuwi6f6ogd" path="res://Sprites/button2.png" id="6_i6xct"]
+[ext_resource type="Texture2D" uid="uid://glwpups86tmp" path="res://Sprites/button3.png" id="7_d2xpc"]
+[ext_resource type="Script" path="res://Button.gd" id="8_jou7t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2xsvt"]
+shader = ExtResource("1_vbwpy")
+shader_parameter/scroll_speed = 0.08
+shader_parameter/angle_degrees = 45.0
+shader_parameter/repeat_x = 12.0
+shader_parameter/repeat_y = 12.0
+shader_parameter/row_offset = 1.0
+shader_parameter/texture_to_scroll = ExtResource("2_pkh3t")
+
+[sub_resource type="Theme" id="Theme_kh2t5"]
+default_font = ExtResource("4_1kn7k")
+
+[node name="Title" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_2xsvt")
+position = Vector2(953, 388)
+scale = Vector2(61.789, 61.789)
+texture = ExtResource("3_2flcl")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 495.0
+offset_top = 53.0
+offset_right = 661.0
+offset_bottom = 120.0
+scale = Vector2(10.043, 10.043)
+theme = SubResource("Theme_kh2t5")
+text = "SPECTRIFY"
+
+[node name="About" type="Label" parent="."]
+offset_left = 1174.0
+offset_top = 312.0
+offset_right = 1370.0
+offset_bottom = 519.0
+scale = Vector2(3.78454, 3.78454)
+theme = SubResource("Theme_kh2t5")
+text = "Put \"song.ogg\" in 
+the same directory
+as the executable
+for this program"
+
+[node name="About2" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 252.0
+offset_right = 209.0
+offset_bottom = 465.0
+scale = Vector2(3.78454, 3.78454)
+theme = SubResource("Theme_kh2t5")
+text = "For macos: Right click app, \"open package content\" contents/macOS
+
+Place file in that folder, should contain macos executable too"
+autowrap_mode = 3
+
+[node name="Button" type="TextureButton" parent="."]
+offset_left = 767.0
+offset_top = 367.0
+offset_right = 807.0
+offset_bottom = 407.0
+scale = Vector2(9.57288, 9.57288)
+texture_normal = ExtResource("5_n3tri")
+texture_pressed = ExtResource("7_d2xpc")
+texture_hover = ExtResource("6_i6xct")
+stretch_mode = 4
+script = ExtResource("8_jou7t")
+
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]

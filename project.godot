@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="AudioVisualizer"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://Title.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Title="*res://Title.tscn"
+globalBPM="*res://BPM.gd"
 
 [display]
 

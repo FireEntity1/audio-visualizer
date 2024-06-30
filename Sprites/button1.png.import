@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd38at3s1yi1l"
-path="res://.godot/imported/BGRepeat.png-11c631ad39b78f31082297def4dba9c0.ctex"
+uid="uid://bq3boskt27brt"
+path="res://.godot/imported/button1.png-bdf2fe99fb19fe59ec7aa1061e011a28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BGRepeat.png"
-dest_files=["res://.godot/imported/BGRepeat.png-11c631ad39b78f31082297def4dba9c0.ctex"]
+source_file="res://Sprites/button1.png"
+dest_files=["res://.godot/imported/button1.png-bdf2fe99fb19fe59ec7aa1061e011a28.ctex"]
 
 [params]
 

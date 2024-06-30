@@ -1,16 +1,21 @@
-[gd_scene load_steps=69 format=3 uid="uid://dwlw6kk4nm8sa"]
+[gd_scene load_steps=75 format=3 uid="uid://dwlw6kk4nm8sa"]
 
 [ext_resource type="Shader" path="res://Background.gdshader" id="1_5jdyw"]
 [ext_resource type="AudioStream" uid="uid://burfd5kxo6f44" path="res://Song.mp3" id="1_aetvp"]
 [ext_resource type="Texture2D" uid="uid://cc20tr5g4a1ak" path="res://icon.svg" id="2_axcx5"]
 [ext_resource type="Script" path="res://Audio.gd" id="2_o6fqn"]
-[ext_resource type="Texture2D" uid="uid://dfv40w2cyn4k6" path="res://Visualizer1.png" id="2_ojbix"]
-[ext_resource type="Texture2D" uid="uid://dd38at3s1yi1l" path="res://BGRepeat.png" id="2_wa0pd"]
-[ext_resource type="Texture2D" uid="uid://dblf5yqx11liw" path="res://Parallax.png" id="4_embc2"]
-[ext_resource type="Texture2D" uid="uid://b6ne32v61fqly" path="res://Visualizer5.png" id="4_veq3a"]
-[ext_resource type="Texture2D" uid="uid://c484vif7jbkec" path="res://Visualizer3.png" id="5_u53ek"]
-[ext_resource type="Texture2D" uid="uid://b8bqhf41em4yd" path="res://visualizer4.png" id="6_nl0xp"]
-[ext_resource type="Texture2D" uid="uid://cc0my3kt5rmrg" path="res://Visualizer6.png" id="11_box5e"]
+[ext_resource type="Texture2D" uid="uid://dfv40w2cyn4k6" path="res://Sprites/Visualizer1.png" id="2_ojbix"]
+[ext_resource type="Texture2D" uid="uid://dd38at3s1yi1l" path="res://Sprites/BGRepeat.png" id="2_wa0pd"]
+[ext_resource type="Texture2D" uid="uid://dblf5yqx11liw" path="res://Sprites/Parallax.png" id="4_embc2"]
+[ext_resource type="Texture2D" uid="uid://b6ne32v61fqly" path="res://Sprites/Visualizer5.png" id="4_veq3a"]
+[ext_resource type="Texture2D" uid="uid://c484vif7jbkec" path="res://Sprites/Visualizer3.png" id="5_u53ek"]
+[ext_resource type="Texture2D" uid="uid://b8bqhf41em4yd" path="res://Sprites/visualizer4.png" id="6_nl0xp"]
+[ext_resource type="Texture2D" uid="uid://cc0my3kt5rmrg" path="res://Sprites/Visualizer6.png" id="11_box5e"]
+[ext_resource type="FontFile" uid="uid://bemm35ki07kj4" path="res://Silkscreen-Regular.ttf" id="12_dfnq2"]
+[ext_resource type="Texture2D" uid="uid://bqmcg6bdp7pfs" path="res://Sprites/bg.png" id="12_kjph5"]
+[ext_resource type="Texture2D" uid="uid://bq3boskt27brt" path="res://Sprites/button1.png" id="13_63htm"]
+[ext_resource type="Texture2D" uid="uid://glwpups86tmp" path="res://Sprites/button3.png" id="14_mv13a"]
+[ext_resource type="Texture2D" uid="uid://b0phuwi6f6ogd" path="res://Sprites/button2.png" id="15_fsmii"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nokdb"]
 shader = ExtResource("1_5jdyw")
@@ -419,6 +424,9 @@ animations = [{
 "speed": 40.0
 }]
 
+[sub_resource type="Theme" id="Theme_ek24b"]
+default_font = ExtResource("12_dfnq2")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="BG" type="Sprite2D" parent="."]
@@ -435,7 +443,6 @@ texture = ExtResource("4_embc2")
 
 [node name="Music Player" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_aetvp")
-autoplay = true
 script = ExtResource("2_o6fqn")
 
 [node name="Glow" type="AnimatedSprite2D" parent="Music Player"]
@@ -469,7 +476,33 @@ scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
 max_value = -15.0
 step = 0.1
-value = -15.0
+value = -25.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer4" type="TextureProgressBar" parent="Music Player"]
+offset_left = 1990.0
+offset_top = 267.0
+offset_right = 2030.0
+offset_bottom = 395.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -25.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer5" type="TextureProgressBar" parent="Music Player"]
+offset_left = 1210.0
+offset_top = 687.0
+offset_right = 1250.0
+offset_bottom = 815.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -25.0
 fill_mode = 3
 texture_progress = ExtResource("2_ojbix")
 
@@ -482,7 +515,33 @@ scale = Vector2(8.43603, 8.43603)
 min_value = -25.0
 max_value = -15.0
 step = 0.1
-value = -15.0
+value = -25.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer11" type="TextureProgressBar" parent="Music Player"]
+offset_left = -312.0
+offset_top = 247.0
+offset_right = -272.0
+offset_bottom = 375.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -25.0
+fill_mode = 3
+texture_progress = ExtResource("2_ojbix")
+
+[node name="Visualizer12" type="TextureProgressBar" parent="Music Player"]
+offset_left = 328.0
+offset_top = 679.0
+offset_right = 368.0
+offset_bottom = 807.0
+scale = Vector2(8.43603, 8.43603)
+min_value = -25.0
+max_value = -15.0
+step = 0.1
+value = -25.0
 fill_mode = 3
 texture_progress = ExtResource("2_ojbix")
 
@@ -507,3 +566,30 @@ modulate = Color(1, 1, 1, 0.419608)
 position = Vector2(955, 618.93)
 scale = Vector2(45.9375, 62.3794)
 sprite_frames = SubResource("SpriteFrames_pp3ho")
+
+[node name="Coverup" type="Sprite2D" parent="Music Player"]
+position = Vector2(944, 536)
+scale = Vector2(90.4487, 90.4487)
+texture = ExtResource("12_kjph5")
+
+[node name="TextEdit" type="TextEdit" parent="Music Player"]
+offset_left = 595.0
+offset_top = 327.0
+offset_right = 713.0
+offset_bottom = 365.0
+scale = Vector2(6.00355, 6.00355)
+theme = SubResource("Theme_ek24b")
+placeholder_text = "ENTER BPM"
+
+[node name="Button" type="TextureButton" parent="Music Player"]
+offset_left = 751.0
+offset_top = 585.0
+offset_right = 791.0
+offset_bottom = 625.0
+scale = Vector2(9.57288, 9.57288)
+texture_normal = ExtResource("13_63htm")
+texture_pressed = ExtResource("14_mv13a")
+texture_hover = ExtResource("15_fsmii")
+stretch_mode = 4
+
+[connection signal="button_up" from="Music Player/Button" to="Music Player" method="_on_button_button_up"]
